@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 body{
     font-family: 'Familjen Grotesk', sans-serif;
     background-color: #FFFFFF;
@@ -79,4 +80,47 @@ nav button {
     font-size: 18px;
     cursor: pointer;
     margin-left: 20px;
+}
+.main{
+    display: flex;
+    position: relative;
+    height: 690px;
+    background-image: url('images/main-foto.svg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .main {
+      height: 200px; 
+    }
+  }
+  @media (max-width: 480px) {
+    .main {
+      height: 150px;
+    }
+  }
+.main h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #1E1F26;
+    font-size: 32px;
+    font-family: "Caudex", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+.path {
+    position: relative;
+    height: 690px;
+    width: 100%;
+    background-color: rgba(217, 217, 217, 0.65);
+    background-blend-mode: multiply;
+}
+.path h1{
+    position:absolute;
+    color: #212331;
+    margin: 55px 60px 40px 60px;
+    font-size: 32px;
 }
