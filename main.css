@@ -118,9 +118,45 @@ nav button {
     background-color: rgba(217, 217, 217, 0.65);
     background-blend-mode: multiply;
 }
-.path h1{
+.path-text{
+    display: flex;
+    flex-direction: column;
     position:absolute;
+    width: auto;
+    height:auto;
+    margin-left: 130px;
+    margin-top: 70px;
+}
+.path h1{
+    position:relative;
     color: #212331;
-    margin: 55px 60px 40px 60px;
+    font-size: 50px;
+}
+.path h2{
+    position: relative;
+    color: #212331;
     font-size: 32px;
+}
+.path h3{
+    position: relative;
+    color: #212331;
+    font-size: 28px;
+    width: 698px;
+    font-weight: 400;
+
+}
+.path button{
+    position: relative;
+    padding: 16px 45px;
+    font-size: 20px;
+    border-radius: 28px;
+    background-color: transparent;
+    border: 2px solid #212331;
+    color: #212331;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.path button:hover {
+    background-color: #212331;
+    color: rgba(217, 217, 217, 0.65);
 }
