@@ -117,46 +117,149 @@ nav button {
     width: 100%;
     background-color: rgba(217, 217, 217, 0.65);
     background-blend-mode: multiply;
+    display: flex;
+    justify-content: flex-start;
 }
 .path-text{
     display: flex;
     flex-direction: column;
     position:absolute;
-    width: auto;
+    width: 80%;
     height:auto;
-    margin-left: 130px;
-    margin-top: 70px;
+    margin-left: 100px;
+    margin-top: 40px;
+
+}
+@media (max-width: 768px) {
+    .path {
+        height: 400px;
+    }
+    .path-text {
+        width: 90%;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .path {
+        height: 300px;
+    }
+    .path-text {
+        width: 95%;
+        margin-left: 20px;
+    }
 }
 .path h1{
-    position:relative;
     color: #212331;
     font-size: 50px;
+    margin: 33px 0px 7px 0px;
 }
 .path h2{
-    position: relative;
-    color: #212331;
-    font-size: 32px;
-}
-.path h3{
-    position: relative;
     color: #212331;
     font-size: 28px;
+}
+.path h3{
+    color: #212331;
+    font-size: 24px;
     width: 698px;
     font-weight: 400;
+    margin:0px 0px 28px 0px;
 
 }
 .path button{
-    position: relative;
     padding: 16px 45px;
     font-size: 20px;
     border-radius: 28px;
+    width: 300px;
     background-color: transparent;
     border: 2px solid #212331;
     color: #212331;
     cursor: pointer;
     transition: all 0.3s ease;
 }
+
 .path button:hover {
     background-color: #212331;
     color: rgba(217, 217, 217, 0.65);
+}
+
+.services{
+    position: relative;
+    height: 690px;
+    width: 100%;
+    background-color: #B9C4C9;
+    background-blend-mode: multiply;
+    display:flex;
+    flex-direction: column;
+}
+.services-info{
+    position:relative;
+    width: 80%;
+    height:auto;
+    margin-left: 100px;
+    margin-top: 40px;
+
+}
+.services-info h1{
+    color: #212331;
+    font-size: 50px;
+    margin: 33px 0px 20px 0px;
+}
+.services-info h2{
+    color: #212331;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 18px;
+    width:45%;
+    margin:0px 0px 28px 0px;
+}
+.services-info button{
+    padding: 14px 30px;
+    font-size: 16px;
+    border-radius: 28px;
+    width: 150px;
+    background-color: transparent;
+    border: 2px solid #212331;
+    color: #212331;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.services-info button:hover{
+    background-color: #212331;
+    color: #B9C4C9;
+}
+.all{
+    position: relative;
+    display: flex;
+    gap: 20px;
+    margin-top: 5px;
+    align-items: center;
+    flex-direction: column;
+}
+.row1{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-right: 5%;
+}
+.row2{
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    margin-left:5%;
+}
+.service{
+    padding: 15px 15px;
+    border-radius: 28px;
+    border: 2px solid #212331;
+    width: 300px;
+    background-color: transparent; 
+    color: #212331;
+}
+.service h1{
+    font-size:18px;
+    font-weight: bold;
+}
+.service p{
+    font-size: 11px;
 }
