@@ -75,6 +75,7 @@ nav button {
     background-color: #1E1F26;
     color: #FFFFFF;
     border-radius: 1000px;
+    border: 2px solid #1E1F26;
     padding: 10px 20px;
     text-align: center;
     font-size: 18px;
@@ -84,7 +85,7 @@ nav button {
 .main{
     display: flex;
     position: relative;
-    height: 690px;
+    height: 730px;
     background-image: url('images/main-foto.svg');
     background-size: cover;
     background-position: center;
@@ -106,14 +107,14 @@ nav button {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #1E1F26;
-    font-size: 32px;
+    font-size: 42px;
     font-family: "Caudex", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     text-align: center;
 }
 .path {
     position: relative;
-    height: 690px;
+    height: 720px;
     width: 100%;
     background-color: rgba(217, 217, 217, 0.65);
     background-blend-mode: multiply;
@@ -132,7 +133,7 @@ nav button {
 }
 @media (max-width: 768px) {
     .path {
-        height: 400px;
+        height: 420px;
     }
     .path-text {
         width: 90%;
@@ -142,7 +143,7 @@ nav button {
 
 @media (max-width: 480px) {
     .path {
-        height: 300px;
+        height: 320px;
     }
     .path-text {
         width: 95%;
@@ -185,12 +186,20 @@ nav button {
 
 .services{
     position: relative;
-    height: 690px;
+    height: 900px;
     width: 100%;
     background-color: #B9C4C9;
     background-blend-mode: multiply;
     display:flex;
     flex-direction: column;
+}
+.img_bet{
+    position: absolute;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 575px;
+    height: 380px;
+    z-index: 1;
 }
 .services-info{
     position:relative;
@@ -203,7 +212,7 @@ nav button {
 .services-info h1{
     color: #212331;
     font-size: 50px;
-    margin: 33px 0px 20px 0px;
+    margin: 130px 0px 15px 0px;
 }
 .services-info h2{
     color: #212331;
@@ -211,7 +220,7 @@ nav button {
     font-weight: 400;
     font-size: 18px;
     width:45%;
-    margin:0px 0px 28px 0px;
+    margin:0px 0px 20px 0px;
 }
 .services-info button{
     padding: 14px 30px;
@@ -231,7 +240,7 @@ nav button {
 .all{
     position: relative;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     margin-top: 5px;
     align-items: center;
     flex-direction: column;
@@ -239,27 +248,40 @@ nav button {
 .row1{
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 30px;
     margin-right: 5%;
 }
 .row2{
     display: flex;
     flex-direction: row;
-    gap:20px;
+    gap:30px;
     margin-left:5%;
 }
 .service{
     padding: 15px 15px;
     border-radius: 28px;
     border: 2px solid #212331;
-    width: 300px;
+    width: 340px;
+    height:85%;
     background-color: transparent; 
     color: #212331;
 }
 .service h1{
-    font-size:18px;
+    font-size:24px;
     font-weight: bold;
 }
 .service p{
-    font-size: 11px;
+    font-size: 16px;
+}
+.star{
+    transform: rotate(0deg);
+    transition: transform 1s ease-in-out;
+    will-change: transform;
+}
+.service:hover .star {
+    transform: rotate(180deg);
+}
+.service:not(:hover) .star {
+    transform: rotate(0deg);
+    transition: transform 1.5s ease-in-out;
 }
