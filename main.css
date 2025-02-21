@@ -285,3 +285,68 @@ nav button {
     transform: rotate(0deg);
     transition: transform 1.5s ease-in-out;
 }
+.reviews{
+    position: relative;
+    height: 885px;
+    width: 100%;
+    background-color: #FFFFFF;
+    background-blend-mode: multiply;
+}
+.reviews h1{
+    color: #212331;
+    font-size: 50px;
+    margin-left: 8%;
+    margin-top: 73px;
+}
+.reviews_div{
+    display: flex;
+    flex-direction: row;
+    padding: 0% 8%;
+    gap: 6%;
+}
+.prs{
+    display:flex;
+    flex-direction: column;
+}
+.user{
+    width: 100px;
+    height: 100px;
+}
+.stars{
+    width: 90px;
+    height: 44px;
+    margin: 7% 0% 0% 0%;
+}
+.review-text{
+    height: 70%;
+}
+.review-text p{
+    font-size: 16px;
+    color: #212331;
+    margin: 0px 0px;
+}
+.prs h1{
+    font-size: 24px;
+    color: #212331;
+    font-weight: bold;
+    margin:0%;
+    margin-top: 4%;
+    
+}
+.reviews h2{
+    color: #212331;
+    font-size: 50px;
+    margin-left: 8%;
+    margin-top: 6%;
+}
+.companies{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% 8%;
+}
+.company-logo{
+    display: flex;
+    flex-direction: column;
+}
