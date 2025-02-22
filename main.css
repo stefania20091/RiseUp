@@ -350,3 +350,29 @@ nav button {
     display: flex;
     flex-direction: column;
 }
+.help{
+    position: relative;
+    height: 800px;
+    width: 100%;
+    background-color: #1E1F26;
+    background-blend-mode: multiply;
+    display:flex;
+    flex-direction: row;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+}
+.social h1{
+    color: #FFFFFF;
+    font-size: 50px;
+    margin-left: 8%;
+    margin-top: 73px;
+}
+.social h2{
+    color: #FFFFFF;
+    font-size: 36px;
+    margin-top: 32px;
+    margin-left: 8%;
+}
+
