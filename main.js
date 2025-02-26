@@ -1,4 +1,11 @@
 const links = document.querySelectorAll('nav a');
+const ourServicesLink = document.querySelector('.our-services-link');
+const servicesList = document.querySelector('.services-list');
+const mainContent = document.querySelector('main');
+const ourServicesButton = document.querySelector(".book-now")
+
+servicesList.style.display = 'none';
+
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   slidesPerView: 4,
@@ -28,3 +35,17 @@ const swiper = new Swiper('.swiper', {
         this.classList.add('active');
       });
     }); 
+
+const ourServicesLinks = () => {
+  Array.from(mainContent.children).forEach(child => {
+    if (child !== servicesList) {
+      child.style.display = 'none';
+    }
+  });
+  servicesList.style.display = 'block';
+};
+ourServicesButton.addEventListener('click', () => {
+  ourServicesLinks();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+ourServicesLink.addEventListener('click', ourServicesLinks);
