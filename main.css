@@ -3,6 +3,7 @@
 body{
     font-family: 'Familjen Grotesk', sans-serif;
     background-color: #FFFFFF;
+    margin:0px;
 }
 header{
     display:flex;
@@ -22,6 +23,7 @@ header{
 .logo{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .logo h1{
     font-size:22px;
@@ -167,7 +169,7 @@ nav button {
     margin:0px 0px 28px 0px;
 
 }
-.path button{
+.about{
     padding: 16px 45px;
     font-size: 20px;
     border-radius: 28px;
@@ -179,7 +181,7 @@ nav button {
     transition: all 0.3s ease;
 }
 
-.path button:hover {
+.about:hover {
     background-color: #212331;
     color: rgba(217, 217, 217, 0.65);
 }
@@ -200,6 +202,13 @@ nav button {
     width: 575px;
     height: 380px;
     z-index: 1;
+    opacity: 0;
+    top: 1680px;
+    transition: top 1.5s, opacity 1s;
+}
+.scroll-anim {
+    top: 1500px;
+    opacity: 1;
 }
 .services-info{
     position:relative;
@@ -240,7 +249,7 @@ nav button {
 .all{
     position: relative;
     display: flex;
-    gap: 30px;
+    gap: 40px;
     margin-top: 5px;
     align-items: center;
     flex-direction: column;
@@ -248,13 +257,13 @@ nav button {
 .row1{
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 40px;
     margin-right: 5%;
 }
 .row2{
     display: flex;
     flex-direction: row;
-    gap:30px;
+    gap:40px;
     margin-left:5%;
 }
 .service{
@@ -262,7 +271,7 @@ nav button {
     border-radius: 28px;
     border: 2px solid #212331;
     width: 340px;
-    height:85%;
+    height:170px;
     background-color: transparent; 
     color: #212331;
 }
@@ -355,11 +364,15 @@ nav button {
 .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal{
     left: var(--swiper-scrollbar-sides-offset, 8%) !important;
 }
+.partners{
+    position: relative;
+    background-color: #FFFFFF;
+    padding: 10% 0% 4% 0%;
+}
 .partners h2{
     color: #212331;
     font-size: 50px;
     margin-left: 8%;
-    margin-top: 10%;
 }
 .companies{
     display: flex;
@@ -367,7 +380,6 @@ nav button {
     align-items: center;
     justify-content: space-between;
     padding: 0% 8%;
-    margin-bottom: 4%;
 }
 .company-logo{
     display: flex;
@@ -481,18 +493,24 @@ nav button {
 }
 .services-list{
     position: relative;
-    height: 1200px;
+    height: 1000px;
     width: 100%;
     background-color: #3B4962;
-    background-blend-mode: multiply;
     display:flex;
     flex-direction: column;
 }
-.services-list h1{
+.ser-list-text{
+    position: relative;
+    background-color: #3B4962;
+    width: 100%;
+    margin-top: 6%;
+    height:fit-content;
+}
+.ser-list-text h1{
     color: #FFFFFF;
     font-size: 50px;
     margin-left: 8%;
-    margin-top: 6%;
+    margin-top: 0%;
     margin-bottom: 0px;
 }
 .main-ser-div{
@@ -565,4 +583,104 @@ nav button {
 }
 .free-co{
     color: #3B4962 !important;
+}
+.story{
+    position: relative;
+    height:auto;
+    width: calc(100% - 200px);
+    margin: 40px 100px 60px 100px;
+    background-color: #FFFFFF;
+    display:flex;
+    flex-direction: column;
+}
+.story h1{
+    color: #02282F;
+    font-weight: 500;
+    font-size: 40px;
+}
+.story p{
+    color:  #02282F;
+    font-weight: 400;
+    font-size: 26px;
+    width: 53%;
+}
+.team{
+    margin-top: 40px;
+}
+.team h2{
+    color: #02282F;
+    font-weight: 500;
+    font-size: 36px;
+}
+.teammates{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.teammate{
+    display: inline-flex;
+    flex-grow: 0;
+    flex-direction: row;
+    height:15%;
+    width:980px;
+    border: 2px solid #075758;
+    border-radius: 35px;
+    align-items: center;
+    margin-top: 30px;
+    transform: translateX(0);
+    transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.teammate:hover {
+    background-color: #A9C4B8;
+    border-color: transparent;
+}
+  
+.teammate:hover .img-holder img {
+    transform: translateX(45px);
+    transition:  0.5s ease-in-out;
+}
+  
+.teammate:hover .mate-info {
+    transform: translateX(45px);
+    transition:  0.5s ease-in-out;
+}
+.teammate:not(:hover) .img-holder img {
+    transition: transform 0.5s ease-in-out;
+}
+  
+  .teammate:not(:hover) .mate-info {
+    transition: transform 0.5s ease-in-out;
+}
+.teammate:not(:hover) {
+    transition: background-color 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.img-holder img{
+    width: 155px;
+    height: 155px;
+    padding: 23px 23px;
+}
+.mate-info{
+    padding: 25px 25px;
+    width: 665px;
+}
+.mate-info h4{
+    font-weight: 500;
+    font-size: 20px;
+    color: #003B46;
+    margin:0px 0px 5px 0px;
+    width: fit-content;
+}
+.mate-info h5{
+    font-weight: 400;
+    font-size: 20px;
+    color: #003B46;
+    margin:0px 0px 5px 0px;
+    width: fit-content;
+}
+.mate-info p{
+    font-weight: 400;
+    font-size: 16px;
+    color: #003B46;
+    margin:0px;
+    width: fit-content;
 }
